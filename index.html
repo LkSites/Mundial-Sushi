@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundial Sushi Bar | Alta Gastronomia Japonesa</title>
+    
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Separado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#inicio" class="logo-link">
+                <img src="mundial sushi.jpg" id="image" alt="Mundial Sushi Bar Logo" class="nav-logo">
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link">Início</a></li>
+                    <li><a href="#destaques" class="nav-link">Especiais</a></li>
+                    <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+                <button class="close-menu" id="close-menu" aria-label="Fechar Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="open-cart" aria-label="Abrir Carrinho">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Hero (Capa) -->
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-logo-wrapper">
+                <img src="mundial sushi.jpg" id="image" alt="Mundial Sushi Bar" class="hero-logo">
+            </div>
+            <span class="hero-subtitle">Tradição & Excelência Oriental</span>
+            <h1 class="hero-title">A verdadeira arte da <span>culinária japonesa</span></h1>
+            <p class="hero-description">
+                Ingredientes selecionados diariamente, cortes precisos e uma explosão de sabores preparados na hora para você.
+            </p>
+            <div class="hero-buttons">
+                <a href="#cardapio" class="btn btn-primary">Fazer Pedido Online</a>
+                <a href="#sobre" class="btn btn-outline">Conhecer a Casa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="features" id="destaques">
+        <div class="container features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-fish"></i></div>
+                <h3>Peixes Frescos</h3>
+                <p>Salmão e atum selecionados rigorosamente todos os dias para garantir textura e sabor impecáveis.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-fire-alt"></i></div>
+                <h3>Preparo na Hora</h3>
+                <p>Cada combinado, temaki ou hot roll é montado exclusivamente após a confirmação do seu pedido.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-motorcycle"></i></div>
+                <h3>Delivery Rápido</h3>
+                <p>Embalagens térmicas especiais que preservam a temperatura ideal dos pratos quentes e frios.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cardápio Interativo -->
+    <section class="menu-section" id="cardapio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nosso Menu</span>
+                <h2 class="section-title">Escolha seu pedido</h2>
+                <p class="section-desc">Adicione os itens ao carrinho e envie seu pedido diretamente pelo nosso WhatsApp.</p>
+            </div>
+
+            <!-- Filtros de Categoria -->
+            <div class="menu-filters" id="menu-filters">
+                <button class="filter-btn active" data-category="todos">Todos</button>
+                <button class="filter-btn" data-category="combinados">Combinados</button>
+                <button class="filter-btn" data-category="temakis">Temakis</button>
+                <button class="filter-btn" data-category="quentes">Pratos Quentes</button>
+                <button class="filter-btn" data-category="bebidas">Bebidas</button>
+            </div>
+
+            <!-- Grid de Produtos (Preenchido via JS) -->
+            <div class="menu-grid" id="menu-grid"></div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section class="about-section" id="sobre">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80" alt="Sushiman preparando sushi">
+                <div class="about-badge">
+                    <span class="badge-script">Mundial</span>
+                    <span class="badge-text">Qualidade Premium</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-tag">Nossa História</span>
+                <h2 class="section-title">Paixão por cada detalhe</h2>
+                <p>
+                    O <strong>Mundial Sushi Bar</strong> nasceu com a missão de elevar a experiência da gastronomia oriental, unindo as técnicas clássicas japonesas ao paladar brasileiro.
+                </p>
+                <p>
+                    Seja no nosso salão aconchegante ou no conforto da sua casa, garantimos padrão máximo de higiene, cortes generosos e atendimento ágil.
+                </p>
+                <ul class="about-list">
+                    <li><i class="fas fa-check-circle"></i> Arroz temperado no ponto exato (Shari)</li>
+                    <li><i class="fas fa-check-circle"></i> Cream cheese original de alta qualidade</li>
+                    <li><i class="fas fa-check-circle"></i> Opções vegetarianas e sem glúten sob consulta</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé e Contato -->
+    <footer class="footer" id="contato">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="mundial sushi.jpg" alt="Mundial Sushi Bar" class="footer-logo">
+                <p>O melhor da culinária japonesa com entrega rápida e qualidade incomparável.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <h3>Horário de Funcionamento</h3>
+                <ul>
+                    <li><strong>Terça a Quinta:</strong> 18h30 às 23h00</li>
+                    <li><strong>Sexta e Sábado:</strong> 18h30 às 00h00</li>
+                    <li><strong>Domingo:</strong> 18h30 às 23h00</li>
+                    <li><strong>Segunda:</strong> Fechado</li>
+                </ul>
+            </div>
+
+            <div class="footer-info">
+                <h3>Localização & Contato</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Principal, 1000 - Centro</li>
+                    <li><i class="fas fa-phone-alt"></i> (11) 99999-9999</li>
+                    <li><i class="fas fa-envelope"></i> contato@mundialsushibar.com.br</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mundial Sushi Bar. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Carrinho Lateral (Drawer) -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Seu Pedido</h3>
+            <button class="close-cart" id="close-cart" aria-label="Fechar Carrinho">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cart-items">
+            <!-- Itens do carrinho inseridos via JS -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="delivery-form">
+                <input type="text" id="client-name" placeholder="Seu nome *" required>
+                <input type="text" id="client-address" placeholder="Endereço completo (Rua, Nº, Bairro) *" required>
+                <select id="payment-method">
+                    <option value="PIX">Pagamento via PIX</option>
+                    <option value="Cartão de Crédito/Débito">Cartão na Entrega</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                </select>
+                <input type="text" id="client-obs" placeholder="Observações (ex: sem cebolinha, troco p/ 50)">
+            </div>
+
+            <div class="cart-total">
+                <span>Total do Pedido:</span>
+                <strong id="cart-total-value">R$ 0,00</strong>
+            </div>
+
+            <button class="btn btn-whatsapp" id="checkout-btn">
+                <i class="fab fa-whatsapp"></i> Finalizar no WhatsApp
+            </button>
+        </div>
+    </aside>
+
+    <!-- Notificação Toast -->
+    <div class="toast" id="toast">Item adicionado ao carrinho!</div>
+
+    <!-- JS Separado -->
+    <script src="script.js"></script>
+</body>
+</html>
